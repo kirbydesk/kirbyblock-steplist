@@ -1,0 +1,220 @@
+/* DO NOT MODIFY THIS FILE - Override in site/patches/css/kirbyblock-steplist/_styles.css */
+
+/* Item colors per theme */
+section[data-block="steplist"] [data-block="item"] {
+	[data-field="number"]  { background-color: var(--pwsteplist-item-number-background); color: var(--pwsteplist-item-number-text); }
+	[data-field="heading"] { color: var(--pwsteplist-item-heading-text); }
+	[data-field="text"]    { color: var(--pwsteplist-item-editor-text); }
+}
+section[data-block="steplist"][data-style="variant"] [data-block="item"] {
+	[data-field="number"]  { background-color: var(--pwsteplist-item-number-background-variant); color: var(--pwsteplist-item-number-text-variant); }
+	[data-field="heading"] { color: var(--pwsteplist-item-heading-text-variant); }
+	[data-field="text"]    { color: var(--pwsteplist-item-editor-text-variant); }
+}
+section[data-block="steplist"][data-style="variant2"] [data-block="item"] {
+	[data-field="number"]  { background-color: var(--pwsteplist-item-number-background-variant2); color: var(--pwsteplist-item-number-text-variant2); }
+	[data-field="heading"] { color: var(--pwsteplist-item-heading-text-variant2); }
+	[data-field="text"]    { color: var(--pwsteplist-item-editor-text-variant2); }
+}
+
+section[data-block="steplist"] {
+
+	/* -------------- Tagline Margins--------------*/
+	[data-field="tagline"] {
+		+ [data-field="heading"] {
+			margin-top: 0.5rem;
+		}
+		+ [data-field="textarea"],
+		+ [data-field="writer"],
+		+ [data-field="markdown"] {
+			margin-top: 0.3rem;
+		}
+		+ [data-block="items"] {
+			margin-top: 1rem;
+		}
+	}
+	/* -------------- Heading Margins--------------*/
+	[data-field="heading"] {
+		+ [data-field="textarea"],
+		+ [data-field="writer"],
+		+ [data-field="markdown"] {
+			margin-top: 0.5rem;
+		}
+		+ [data-block="items"] {
+			margin-top: 1.2rem;
+		}
+	}
+	/* -------------- Texts Margins--------------*/
+	[data-field="textarea"],
+	[data-field="writer"],
+	[data-field="markdown"] {
+		+ [data-block="items"] {
+			margin-top: 2rem;
+		}
+	}
+
+	/* -------------- Items (base) --------------*/
+	div[data-block="items"] {
+		[data-block="item"] {
+			display: flex;
+			flex-direction: row;
+			gap: var(--pwsteplist-item-content-gap, 1rem);
+			align-items: flex-start;
+			margin-bottom: var(--pwsteplist-item-gap, 1.2rem);
+
+			div[data-field="number"] {
+				flex-shrink: 0;
+				width: var(--pwsteplist-item-number-size, 2.5rem);
+				height: var(--pwsteplist-item-number-size, 2.5rem);
+				font-size: calc(var(--pwsteplist-item-number-size, 2.5rem) * 0.4);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 50%;
+				font-weight: 700;
+				line-height: 1;
+			}
+		}
+		&[data-number-align="top"]    [data-block="item"] { align-items: flex-start; }
+		&[data-number-align="center"] [data-block="item"] { align-items: center; }
+		[data-block="item"] {
+			div[data-field="content"] {
+				flex: 1;
+
+				[data-field="heading"] + [data-field="text"]{
+					margin-top: 0.2rem;
+				}
+
+				div[data-field="text"]{
+					ul {
+						margin: .5rem 0 0;
+						list-style: disc;
+						padding-left: 1.3em;
+					}
+					ol {
+						margin: .5rem 0 0;
+						list-style: decimal;
+						padding-left: 1.3em;
+					}
+				}
+			}
+		}
+	}
+
+	/* -------------- Item styles --------------*/
+
+	/* centered: number above content, everything centered */
+	div[data-block="items"][data-item-style="centered"] [data-block="item"] {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	/* connected: continuous vertical line running through all items */
+	div[data-block="items"][data-item-style="connected"] {
+		overflow: visible;
+	}
+	div[data-block="items"][data-item-style="connected"] [data-block="item"] {
+		position: relative;
+		overflow: visible;
+	}
+	div[data-block="items"][data-item-style="connected"] [data-field="number"] {
+		position: relative;
+		z-index: 1;
+	}
+	div[data-block="items"][data-item-style="connected"] [data-block="item"]::after {
+		content: "";
+		position: absolute;
+		left: calc(var(--pwsteplist-item-number-size, 2.5rem) / 2 - var(--pwsteplist-item-connector-width, 2px) / 2);
+		top: 0;
+		bottom: calc(var(--pwsteplist-item-gap, 1.2rem) * -1);
+		width: var(--pwsteplist-item-connector-width, 2px);
+		background: var(--pwsteplist-item-connector, currentColor);
+		opacity: 0.4;
+	}
+	/* first item: line starts at bubble center (nothing above) */
+	div[data-block="items"][data-item-style="connected"][data-number-align="top"]    [data-block="item"][data-first="true"]::after { top: calc(var(--pwsteplist-item-number-size, 2.5rem) / 2); }
+	div[data-block="items"][data-item-style="connected"][data-number-align="center"] [data-block="item"][data-first="true"]::after { top: 50%; }
+	/* last item: line ends at bubble center (nothing below) */
+	div[data-block="items"][data-item-style="connected"][data-number-align="top"]    [data-block="item"][data-last="true"]::after { bottom: calc(100% - var(--pwsteplist-item-number-size, 2.5rem) / 2); }
+	div[data-block="items"][data-item-style="connected"][data-number-align="center"] [data-block="item"][data-last="true"]::after { bottom: 50%; }
+	/* only-child: no line */
+	div[data-block="items"][data-item-style="connected"] [data-block="item"][data-first="true"][data-last="true"]::after { display: none; }
+	&[data-style="variant"]  [data-item-style="connected"] [data-block="item"]::after { background: var(--pwsteplist-item-connector-variant, currentColor); }
+	&[data-style="variant2"] [data-item-style="connected"] [data-block="item"]::after { background: var(--pwsteplist-item-connector-variant2, currentColor); }
+
+	/* minimal: number as small text prefix, no bubble */
+	div[data-block="items"][data-item-style="minimal"][data-number-align="top"]    [data-block="item"] { align-items: baseline !important; }
+	div[data-block="items"][data-item-style="minimal"][data-number-align="center"] [data-block="item"] { align-items: center !important; }
+	div[data-block="items"][data-item-style="minimal"] [data-block="item"] [data-field="number"] {
+		width: auto;
+		height: auto;
+		background: none !important;
+		color: var(--pwsteplist-item-number-background, currentColor) !important;
+		border-radius: 0;
+		font-size: var(--pwsteplist-item-number-size, 2.5rem);
+		line-height: inherit;
+		align-items: baseline;
+	}
+}
+
+/* Columns - Small (from 640px) */
+@media (min-width: 640px) {
+	section[data-block="steplist"] div[data-block="items"] {
+		display: grid;
+		gap: var(--pwsteplist-item-gap, 1.5rem);
+		margin-bottom: var(--pwsteplist-item-gap, 1.5rem);
+
+		[data-block="item"] {
+			margin-bottom: 0;
+		}
+	}
+	section[data-block="steplist"] div[data-block="items"][data-columns-sm="1"] { grid-template-columns: repeat(1, 1fr); }
+	section[data-block="steplist"] div[data-block="items"][data-columns-sm="2"] { grid-template-columns: repeat(2, 1fr); }
+	section[data-block="steplist"] div[data-block="items"][data-columns-sm="3"] { grid-template-columns: repeat(3, 1fr); }
+	section[data-block="steplist"] div[data-block="items"][data-columns-sm="4"] { grid-template-columns: repeat(4, 1fr); }
+	section[data-block="steplist"] div[data-block="items"][data-columns-sm="5"] { grid-template-columns: repeat(5, 1fr); }
+	section[data-block="steplist"] div[data-block="items"][data-columns-sm="6"] { grid-template-columns: repeat(6, 1fr); }
+}
+
+/* Columns - Medium (from 768px) */
+@media (min-width: 768px) {
+	section[data-block="steplist"] div[data-block="items"] {
+		gap: var(--pwsteplist-item-gap, 2rem);
+		margin-bottom: var(--pwsteplist-item-gap, 2rem);
+	}
+	section[data-block="steplist"] div[data-block="items"][data-columns-md="1"] { grid-template-columns: repeat(1, 1fr); }
+	section[data-block="steplist"] div[data-block="items"][data-columns-md="2"] { grid-template-columns: repeat(2, 1fr); }
+	section[data-block="steplist"] div[data-block="items"][data-columns-md="3"] { grid-template-columns: repeat(3, 1fr); }
+	section[data-block="steplist"] div[data-block="items"][data-columns-md="4"] { grid-template-columns: repeat(4, 1fr); }
+	section[data-block="steplist"] div[data-block="items"][data-columns-md="5"] { grid-template-columns: repeat(5, 1fr); }
+	section[data-block="steplist"] div[data-block="items"][data-columns-md="6"] { grid-template-columns: repeat(6, 1fr); }
+}
+
+/* Columns - Large (from 1024px) */
+@media (min-width: 1024px) {
+	section[data-block="steplist"] div[data-block="items"] {
+		gap: var(--pwsteplist-item-gap, 2.5rem);
+		margin-bottom: var(--pwsteplist-item-gap, 2.5rem);
+	}
+	section[data-block="steplist"] div[data-block="items"][data-columns-lg="1"] { grid-template-columns: repeat(1, 1fr); }
+	section[data-block="steplist"] div[data-block="items"][data-columns-lg="2"] { grid-template-columns: repeat(2, 1fr); }
+	section[data-block="steplist"] div[data-block="items"][data-columns-lg="3"] { grid-template-columns: repeat(3, 1fr); }
+	section[data-block="steplist"] div[data-block="items"][data-columns-lg="4"] { grid-template-columns: repeat(4, 1fr); }
+	section[data-block="steplist"] div[data-block="items"][data-columns-lg="5"] { grid-template-columns: repeat(5, 1fr); }
+	section[data-block="steplist"] div[data-block="items"][data-columns-lg="6"] { grid-template-columns: repeat(6, 1fr); }
+}
+
+/* Columns - Extra Large (from 1280px) */
+@media (min-width: 1280px) {
+	section[data-block="steplist"] div[data-block="items"] {
+		gap: var(--pwsteplist-item-gap, 2.5rem);
+		margin-bottom: var(--pwsteplist-item-gap, 2.5rem);
+	}
+	section[data-block="steplist"] div[data-block="items"][data-columns-xl="1"] { grid-template-columns: repeat(1, 1fr); }
+	section[data-block="steplist"] div[data-block="items"][data-columns-xl="2"] { grid-template-columns: repeat(2, 1fr); }
+	section[data-block="steplist"] div[data-block="items"][data-columns-xl="3"] { grid-template-columns: repeat(3, 1fr); }
+	section[data-block="steplist"] div[data-block="items"][data-columns-xl="4"] { grid-template-columns: repeat(4, 1fr); }
+	section[data-block="steplist"] div[data-block="items"][data-columns-xl="5"] { grid-template-columns: repeat(5, 1fr); }
+	section[data-block="steplist"] div[data-block="items"][data-columns-xl="6"] { grid-template-columns: repeat(6, 1fr); }
+}

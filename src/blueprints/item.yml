@@ -1,0 +1,30 @@
+---
+name: kirbyblock-steplist.item
+icon: item
+tabs:
+  content:
+    label: pw.tab.content
+    fields:
+      headlineContent:
+        extends: pagewizard/headlines/content
+      heading:
+        type: text
+        label: kirbyblock-steplist.item.heading
+        help: kirbyblock-steplist.item.heading.help
+        placeholder: kirbyblock-steplist.item.heading.placeholder
+      description:
+        type: writer
+        marks:
+          - bold
+          - italic
+          - underline
+          - strike
+          - link
+        nodes:
+          - bulletList
+          - orderedList
+        toolbar:
+          inline: false
+        label: kirbyblock-steplist.item.description
+        help: kirbyblock-steplist.item.description.help
+        placeholder: kirbyblock-steplist.item.description.placeholder
