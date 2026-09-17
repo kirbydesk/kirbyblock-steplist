@@ -218,3 +218,13 @@ section[data-block="steplist"] {
 	section[data-block="steplist"] div[data-block="items"][data-columns-xl="5"] { grid-template-columns: repeat(5, 1fr); }
 	section[data-block="steplist"] div[data-block="items"][data-columns-xl="6"] { grid-template-columns: repeat(6, 1fr); }
 }
+
+
+/* -------------- Variant 3 (mirror of variant2) --------------*/
+section[data-block="steplist"][data-style="variant3"] [data-block="item"] {
+	[data-field="number"]  { background-color: var(--pwsteplist-item-number-background-variant3); color: var(--pwsteplist-item-number-text-variant3); }
+	[data-field="heading"] { color: var(--pwsteplist-item-heading-text-variant3); }
+	[data-field="text"]    { color: var(--pwsteplist-item-editor-text-variant3); }
+}
+	&[data-style="variant3"] [data-item-style="connected"] [data-block="item"]::after { background: var(--pwsteplist-item-connector-variant3, currentColor); }
+
