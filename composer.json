@@ -1,6 +1,6 @@
 {
 	"name": "kirbydesk/kirbyblock-steplist",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Steplist Block for Kirby CMS",
 	"type": "kirby-plugin",
 	"keywords": [

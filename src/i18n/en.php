@@ -1,6 +1,7 @@
 <?php return array(
 
 	'kirbyblock-steplist.name' => 'Step List',
+	'kirbyblock-steplist.ai' => 'A numbered sequence of steps. Use it whenever the content describes a process or procedure in a fixed order.',
 	'kirbyblock-steplist.item' => 'Step',
 	'kirbyblock-steplist.item.heading' => 'Step title',
 	'kirbyblock-steplist.item.heading.help' => 'Add a title for this step.',
