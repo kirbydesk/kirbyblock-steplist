@@ -35,6 +35,31 @@
 					"step": 0.025,
 					"min": 0.05,
 					"max": 1
+				},
+				"item-radius": {
+					"label": "kirbyblock-steplist.item-radius",
+					"value": [
+						"0.5rem",
+						"0.5rem",
+						"0.5rem",
+						"0.5rem"
+					],
+					"unit": "rem",
+					"step": 0.1,
+					"min": 0,
+					"max": 20,
+					"suffixes": [
+						"-top-left",
+						"-top-right",
+						"-bottom-left",
+						"-bottom-right"
+					],
+					"labels": [
+						"pw.option.top-left",
+						"pw.option.top-right",
+						"pw.option.bottom-left",
+						"pw.option.bottom-right"
+					]
 				}
 			},
 			"colors": {
@@ -215,6 +240,15 @@
 			},
 			"radius-bottom-right": {
 				"default": false
+			},
+			"item-shape": {
+				"label": "kirbyblock-steplist.item-shape",
+				"options": [
+					"square",
+					"round",
+					"custom"
+				],
+				"default": "round"
 			}
 		},
 		"style": {

@@ -35,7 +35,7 @@
 					<pwEditor v-if="settings.editor" :content="content" :alignDefault="fieldDefaults['align-editor']" />
 
 					<!-- Blocks -->
-					<div v-if="blockItems.length" class="pwItems" :data-item-style="content.itemstyle || defaults['item-style'] || 'default'" :data-number-align="content.itemnumberalign || defaults['item-number-align'] || 'center'">
+					<div v-if="blockItems.length" class="pwItems" :data-item-style="content.itemstyle || defaults['item-style'] || 'default'" :data-number-align="content.itemnumberalign || defaults['item-number-align'] || 'center'" :data-shape="defaults['item-shape'] || 'round'">
 						<div v-for="(item, idx) in blockItems" :key="item.id" class="pwItem" :class="{'ishidden': item.isHidden}">
 							<div class="pwNumber">{{ idx + 1 }}</div>
 							<div class="pwContent">
@@ -117,11 +117,14 @@ div.pwNumber {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border-radius: 50%;
 	background: var(--pwsteplist-item-number-background, var(--pw-color-heading, var(--color-gray-600)));
 	color: var(--pwsteplist-item-number-text, #FFFFFF);
 	font-weight: 700;
 }
+
+/* number shape (the exact custom radii are not previewed) */
+div.pwItems[data-shape="round"]  div.pwNumber { border-radius: 50%; }
+div.pwItems[data-shape="custom"] div.pwNumber { border-radius: 0.5rem; }
 
 /* centered */
 div.pwItems[data-item-style="centered"] div.pwItem {

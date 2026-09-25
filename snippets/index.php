@@ -39,6 +39,7 @@ if ($items->count() > 0):
 	echo ' data-columns-xl="'.$block->columnsxl()->value().'"';
 	echo ' data-item-style="'.$itemStyle.'"';
 	echo ' data-number-align="'.$itemNumberAlign.'"';
+	echo ' data-shape="'.($config['defaults']['item-shape'] ?? 'round').'"';
 	echo '>'."\n";
 
 	$number = 1;

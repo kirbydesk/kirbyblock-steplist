@@ -37,6 +37,11 @@
 	'prw.prop.item-editor-text'       => 'Description Text',
 	'prw.prop.item-connector'         => 'Connector Line',
 
+	'kirbyblock-steplist.item-shape' => 'Number Shape',
+	'kirbyblock-steplist.item-radius' => 'Number Corner Radius',
+	'pw.field.shape' => 'Shape',
+	'pw.option.square' => 'Square',
+
 	/* -------------- Style property labels (rendered by pw-field-row) --------------*/
 	'prw.property.item-style'        => 'Item style',
 	'prw.property.item-number-align' => 'Number alignment',

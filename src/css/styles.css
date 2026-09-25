@@ -70,10 +70,18 @@ section[data-block="steplist"] {
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				border-radius: 50%;
 				font-weight: 700;
 				line-height: 1;
 			}
+		}
+		/* Number shape (Project Wizard → Items, same as logo cloud / featurelist tile) */
+		&[data-shape="round"]  div[data-field="number"] { border-radius: 50%; }
+		&[data-shape="custom"] div[data-field="number"] {
+			border-radius:
+				var(--pwsteplist-item-radius-top-left)
+				var(--pwsteplist-item-radius-top-right)
+				var(--pwsteplist-item-radius-bottom-right)
+				var(--pwsteplist-item-radius-bottom-left);
 		}
 		&[data-number-align="top"]    [data-block="item"] { align-items: flex-start; }
 		&[data-number-align="center"] [data-block="item"] { align-items: center; }

@@ -37,6 +37,11 @@
 	'prw.prop.item-editor-text' => 'Beschreibung',
 	'prw.prop.item-connector' => 'Verbindungslinie',
 
+	'kirbyblock-steplist.item-shape' => 'Nummer-Form',
+	'kirbyblock-steplist.item-radius' => 'Nummer-Eckenradius',
+	'pw.field.shape' => 'Form',
+	'pw.option.square' => 'Eckig',
+
 	/* -------------- Style property labels (rendered by pw-field-row) --------------*/
 	'prw.property.item-style' => 'Darstellung der Schritte',
 	'prw.property.item-number-align' => 'Ausrichtung der Nummer',
