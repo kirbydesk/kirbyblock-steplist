@@ -28,7 +28,7 @@
 	/* -------------- Item value labels (rendered by pw-block-values) --------------*/
 	'prw.valuegroup.items' => 'Einträge',
 	'prw.prop.item-number-size' => 'Größe der Nummer',
-	'prw.prop.item-gap' => 'Abstand zwischen Schritten',
+	'prw.prop.item-gap' => 'Abstand zwischen Einträgen',
 	'prw.prop.item-content-gap' => 'Abstand Nummer – Text',
 	'prw.prop.item-connector-width' => 'Breite der Verbindungslinie',
 	'prw.prop.item-number-background' => 'Hintergrund der Nummer',
