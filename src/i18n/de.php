@@ -44,7 +44,7 @@
 	'prw.prop.item-connector' => 'Verbindungslinie',
 
 	'kirbyblock-steplist.item-shape' => 'Form',
-	'kirbyblock-steplist.item-radius' => 'Nummer-Eckenradius',
+	'kirbyblock-steplist.item-radius' => 'Radien',
 	'pw.field.shape' => 'Form',
 	'pw.option.square' => 'Eckig',
 
