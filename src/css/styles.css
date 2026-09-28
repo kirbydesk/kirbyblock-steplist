@@ -64,6 +64,8 @@ section[data-block="steplist"] {
 
 			div[data-field="number"] {
 				flex-shrink: 0;
+				/* fine vertical position (Project Wizard → Design → Style) */
+				translate: 0 var(--pwsteplist-item-number-offset);
 				width: var(--pwsteplist-item-number-size, 2.5rem);
 				height: var(--pwsteplist-item-number-size, 2.5rem);
 				font-size: calc(var(--pwsteplist-item-number-size, 2.5rem) * 0.4);
@@ -141,11 +143,11 @@ section[data-block="steplist"] {
 		opacity: 0.4;
 	}
 	/* first item: line starts at bubble center (nothing above) */
-	div[data-block="items"][data-item-style="connected"][data-number-align="top"]    [data-block="item"][data-first="true"]::after { top: calc(var(--pwsteplist-item-number-size, 2.5rem) / 2); }
-	div[data-block="items"][data-item-style="connected"][data-number-align="center"] [data-block="item"][data-first="true"]::after { top: 50%; }
+	div[data-block="items"][data-item-style="connected"][data-number-align="top"]    [data-block="item"][data-first="true"]::after { top: calc(var(--pwsteplist-item-number-size, 2.5rem) / 2 + var(--pwsteplist-item-number-offset)); }
+	div[data-block="items"][data-item-style="connected"][data-number-align="center"] [data-block="item"][data-first="true"]::after { top: calc(50% + var(--pwsteplist-item-number-offset)); }
 	/* last item: line ends at bubble center (nothing below) */
-	div[data-block="items"][data-item-style="connected"][data-number-align="top"]    [data-block="item"][data-last="true"]::after { bottom: calc(100% - var(--pwsteplist-item-number-size, 2.5rem) / 2); }
-	div[data-block="items"][data-item-style="connected"][data-number-align="center"] [data-block="item"][data-last="true"]::after { bottom: 50%; }
+	div[data-block="items"][data-item-style="connected"][data-number-align="top"]    [data-block="item"][data-last="true"]::after { bottom: calc(100% - var(--pwsteplist-item-number-size, 2.5rem) / 2 - var(--pwsteplist-item-number-offset)); }
+	div[data-block="items"][data-item-style="connected"][data-number-align="center"] [data-block="item"][data-last="true"]::after { bottom: calc(50% - var(--pwsteplist-item-number-offset)); }
 	/* only-child: no line */
 	div[data-block="items"][data-item-style="connected"] [data-block="item"][data-first="true"][data-last="true"]::after { display: none; }
 	&[data-style="variant"]  [data-item-style="connected"] [data-block="item"]::after { background: var(--pwsteplist-item-connector-variant, currentColor); }

@@ -29,6 +29,7 @@
 	'prw.valuegroup.items' => 'Einträge',
 	'prw.prop.item-number-size' => 'Größe der Nummer',
 	'prw.prop.item-number-size-minimal' => 'Schriftgröße der Nummer',
+	'prw.prop.item-number-offset' => 'Versatz der Nummer',
 	'prw.prop.item-gap' => 'Abstand zwischen Einträgen',
 	'prw.prop.item-content-gap' => 'Abstand Nummer – Text',
 	'prw.prop.item-connector-width' => 'Breite der Verbindungslinie',

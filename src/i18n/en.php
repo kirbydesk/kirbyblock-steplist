@@ -29,6 +29,7 @@
 	'prw.valuegroup.items'            => 'Items',
 	'prw.prop.item-number-size'       => 'Number Size',
 	'prw.prop.item-number-size-minimal' => 'Number Font Size',
+	'prw.prop.item-number-offset' => 'Number Offset',
 	'prw.prop.item-gap'               => 'Item Gap',
 	'prw.prop.item-content-gap'       => 'Number Text Gap',
 	'prw.prop.item-connector-width'   => 'Connector Width',
