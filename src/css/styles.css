@@ -273,5 +273,7 @@ section[data-block="steplist"][data-style="variant3"] [data-block="item"] {
 	[data-field="heading"] { color: var(--pwsteplist-item-heading-text-variant3); }
 	[data-field="text"]    { color: var(--pwsteplist-item-editor-text-variant3); }
 }
-	&[data-style="variant3"] [data-item-style="connected"] [data-block="item"]::after { background: var(--pwsteplist-item-connector-variant3, currentColor); }
+section[data-block="steplist"][data-style="variant3"] [data-item-style="connected"] [data-block="item"]::after {
+	background: var(--pwsteplist-item-connector-variant3, currentColor);
+}
 
