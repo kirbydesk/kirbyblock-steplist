@@ -50,13 +50,6 @@
 					"min": -4,
 					"max": 4
 				},
-				"item-number-offset-centered": {
-					"value": "0rem",
-					"unit": "rem",
-					"step": 0.05,
-					"min": -4,
-					"max": 4
-				},
 				"item-number-offset-connected": {
 					"value": "0rem",
 					"unit": "rem",

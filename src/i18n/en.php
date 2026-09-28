@@ -32,7 +32,6 @@
 	'prw.prop.item-number-offset' => 'Number Offset',
 	'prw.prop.item-number-size-centered' => 'Number Size',
 	'prw.prop.item-number-size-connected' => 'Number Size',
-	'prw.prop.item-number-offset-centered' => 'Number Offset',
 	'prw.prop.item-number-offset-connected' => 'Number Offset',
 	'prw.prop.item-number-offset-minimal' => 'Number Offset',
 	'prw.prop.item-content-gap-centered' => 'Number Text Gap',

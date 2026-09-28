@@ -32,7 +32,6 @@
 	'prw.prop.item-number-offset' => 'Versatz der Nummer',
 	'prw.prop.item-number-size-centered' => 'Größe der Nummer',
 	'prw.prop.item-number-size-connected' => 'Größe der Nummer',
-	'prw.prop.item-number-offset-centered' => 'Versatz der Nummer',
 	'prw.prop.item-number-offset-connected' => 'Versatz der Nummer',
 	'prw.prop.item-number-offset-minimal' => 'Versatz der Nummer',
 	'prw.prop.item-content-gap-centered' => 'Abstand Nummer – Text',

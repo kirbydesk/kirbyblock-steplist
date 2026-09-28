@@ -63,7 +63,8 @@ section[data-block="steplist"] {
 	}
 	div[data-block="items"][data-item-style="centered"] {
 		--steplist-number-size: var(--pwsteplist-item-number-size-centered);
-		--steplist-number-offset: var(--pwsteplist-item-number-offset-centered);
+		/* no offset: the number sits above the text, its gap sets the distance */
+		--steplist-number-offset: 0rem;
 		--steplist-content-gap: var(--pwsteplist-item-content-gap-centered);
 	}
 	div[data-block="items"][data-item-style="connected"] {
