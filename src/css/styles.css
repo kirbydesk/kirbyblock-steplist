@@ -260,6 +260,13 @@ section[data-block="steplist"] {
 }
 
 
+/* Connected: always one column (the line runs down through all steps) */
+@media (min-width: 640px) {
+	section[data-block="steplist"] div[data-block="items"][data-item-style="connected"] {
+		grid-template-columns: minmax(0, 1fr);
+	}
+}
+
 /* -------------- Variant 3 (mirror of variant2) --------------*/
 section[data-block="steplist"][data-style="variant3"] [data-block="item"] {
 	[data-field="number"]  { background-color: var(--pwsteplist-item-number-background-variant3); color: var(--pwsteplist-item-number-text-variant3); }
