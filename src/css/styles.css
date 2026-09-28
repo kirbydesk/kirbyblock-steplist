@@ -53,22 +53,47 @@ section[data-block="steplist"] {
 		}
 	}
 
+	/* -------------- Values per item style --------------*/
+	/* number size, its vertical offset and its gap to the text are set per
+	   style (Project Wizard → Design → Style); "default" uses the plain names */
+	div[data-block="items"] {
+		--steplist-number-size: var(--pwsteplist-item-number-size);
+		--steplist-number-offset: var(--pwsteplist-item-number-offset);
+		--steplist-content-gap: var(--pwsteplist-item-content-gap);
+	}
+	div[data-block="items"][data-item-style="centered"] {
+		--steplist-number-size: var(--pwsteplist-item-number-size-centered);
+		--steplist-number-offset: var(--pwsteplist-item-number-offset-centered);
+		--steplist-content-gap: var(--pwsteplist-item-content-gap-centered);
+	}
+	div[data-block="items"][data-item-style="connected"] {
+		--steplist-number-size: var(--pwsteplist-item-number-size-connected);
+		--steplist-number-offset: var(--pwsteplist-item-number-offset-connected);
+		--steplist-content-gap: var(--pwsteplist-item-content-gap-connected);
+	}
+	/* minimal: the size is the number's font size */
+	div[data-block="items"][data-item-style="minimal"] {
+		--steplist-number-size: var(--pwsteplist-item-number-size-minimal);
+		--steplist-number-offset: var(--pwsteplist-item-number-offset-minimal);
+		--steplist-content-gap: var(--pwsteplist-item-content-gap-minimal);
+	}
+
 	/* -------------- Items (base) --------------*/
 	div[data-block="items"] {
 		[data-block="item"] {
 			display: flex;
 			flex-direction: row;
-			gap: var(--pwsteplist-item-content-gap, 1rem);
+			gap: var(--steplist-content-gap);
 			align-items: flex-start;
 			margin-bottom: var(--pwsteplist-item-gap, 1.2rem);
 
 			div[data-field="number"] {
 				flex-shrink: 0;
 				/* fine vertical position (Project Wizard → Design → Style) */
-				translate: 0 var(--pwsteplist-item-number-offset);
-				width: var(--pwsteplist-item-number-size, 2.5rem);
-				height: var(--pwsteplist-item-number-size, 2.5rem);
-				font-size: calc(var(--pwsteplist-item-number-size, 2.5rem) * 0.4);
+				translate: 0 var(--steplist-number-offset);
+				width: var(--steplist-number-size);
+				height: var(--steplist-number-size);
+				font-size: calc(var(--steplist-number-size) * 0.4);
 				display: flex;
 				align-items: center;
 				justify-content: center;
@@ -135,7 +160,7 @@ section[data-block="steplist"] {
 	div[data-block="items"][data-item-style="connected"] [data-block="item"]::after {
 		content: "";
 		position: absolute;
-		left: calc(var(--pwsteplist-item-number-size, 2.5rem) / 2 - var(--pwsteplist-item-connector-width, 2px) / 2);
+		left: calc(var(--steplist-number-size) / 2 - var(--pwsteplist-item-connector-width, 2px) / 2);
 		top: 0;
 		bottom: calc(var(--pwsteplist-item-gap, 1.2rem) * -1);
 		width: var(--pwsteplist-item-connector-width, 2px);
@@ -143,11 +168,11 @@ section[data-block="steplist"] {
 		opacity: 0.4;
 	}
 	/* first item: line starts at bubble center (nothing above) */
-	div[data-block="items"][data-item-style="connected"][data-number-align="top"]    [data-block="item"][data-first="true"]::after { top: calc(var(--pwsteplist-item-number-size, 2.5rem) / 2 + var(--pwsteplist-item-number-offset)); }
-	div[data-block="items"][data-item-style="connected"][data-number-align="center"] [data-block="item"][data-first="true"]::after { top: calc(50% + var(--pwsteplist-item-number-offset)); }
+	div[data-block="items"][data-item-style="connected"][data-number-align="top"]    [data-block="item"][data-first="true"]::after { top: calc(var(--steplist-number-size) / 2 + var(--steplist-number-offset)); }
+	div[data-block="items"][data-item-style="connected"][data-number-align="center"] [data-block="item"][data-first="true"]::after { top: calc(50% + var(--steplist-number-offset)); }
 	/* last item: line ends at bubble center (nothing below) */
-	div[data-block="items"][data-item-style="connected"][data-number-align="top"]    [data-block="item"][data-last="true"]::after { bottom: calc(100% - var(--pwsteplist-item-number-size, 2.5rem) / 2 - var(--pwsteplist-item-number-offset)); }
-	div[data-block="items"][data-item-style="connected"][data-number-align="center"] [data-block="item"][data-last="true"]::after { bottom: calc(50% - var(--pwsteplist-item-number-offset)); }
+	div[data-block="items"][data-item-style="connected"][data-number-align="top"]    [data-block="item"][data-last="true"]::after { bottom: calc(100% - var(--steplist-number-size) / 2 - var(--steplist-number-offset)); }
+	div[data-block="items"][data-item-style="connected"][data-number-align="center"] [data-block="item"][data-last="true"]::after { bottom: calc(50% - var(--steplist-number-offset)); }
 	/* only-child: no line */
 	div[data-block="items"][data-item-style="connected"] [data-block="item"][data-first="true"][data-last="true"]::after { display: none; }
 	&[data-style="variant"]  [data-item-style="connected"] [data-block="item"]::after { background: var(--pwsteplist-item-connector-variant, currentColor); }
@@ -162,7 +187,7 @@ section[data-block="steplist"] {
 		background: none !important;
 		color: var(--pwsteplist-item-number-background, currentColor) !important;
 		border-radius: 0;
-		font-size: var(--pwsteplist-item-number-size-minimal);
+		font-size: var(--steplist-number-size);
 		line-height: inherit;
 		align-items: baseline;
 	}
