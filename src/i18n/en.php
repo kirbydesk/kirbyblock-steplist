@@ -46,7 +46,7 @@
 	'prw.prop.item-editor-text'       => 'Description Text',
 	'prw.prop.item-connector'         => 'Connector Line',
 
-	'kirbyblock-steplist.item-shape' => 'Number Shape',
+	'kirbyblock-steplist.item-shape' => 'Shape',
 	'kirbyblock-steplist.item-radius' => 'Number Corner Radius',
 	'pw.field.shape' => 'Shape',
 	'pw.option.square' => 'Square',

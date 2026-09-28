@@ -46,7 +46,7 @@
 	'prw.prop.item-editor-text' => 'Beschreibung',
 	'prw.prop.item-connector' => 'Verbindungslinie',
 
-	'kirbyblock-steplist.item-shape' => 'Nummer-Form',
+	'kirbyblock-steplist.item-shape' => 'Form',
 	'kirbyblock-steplist.item-radius' => 'Nummer-Eckenradius',
 	'pw.field.shape' => 'Form',
 	'pw.option.square' => 'Eckig',
