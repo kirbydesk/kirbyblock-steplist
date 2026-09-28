@@ -12,7 +12,7 @@
 	'kirbyblock-steplist.items' => 'Schritte',
 
 	/* -------------- Item style --------------*/
-	'kirbyblock-steplist.item-style' => 'Darstellung der Schritte',
+	'kirbyblock-steplist.item-style' => 'Darstellung',
 	'kirbyblock-steplist.item-style.help' => 'Lege fest, wie die einzelnen Schritte dargestellt werden.',
 	'kirbyblock-steplist.item-style.default' => 'Standard',
 	'kirbyblock-steplist.item-style.centered' => 'Zentriert',
@@ -49,5 +49,5 @@
 	'pw.option.square' => 'Eckig',
 
 	/* -------------- Style property labels (rendered by pw-field-row) --------------*/
-	'prw.property.item-style' => 'Darstellung der Schritte',
+	'prw.property.item-style' => 'Darstellung',
 );

@@ -12,7 +12,7 @@
 	'kirbyblock-steplist.items' => 'Steps',
 
 	/* -------------- Item style --------------*/
-	'kirbyblock-steplist.item-style'           => 'Item style',
+	'kirbyblock-steplist.item-style'           => 'Display',
 	'kirbyblock-steplist.item-style.help'      => 'Choose how each step is displayed.',
 	'kirbyblock-steplist.item-style.default'   => 'Default',
 	'kirbyblock-steplist.item-style.centered'  => 'Centered',
@@ -49,5 +49,5 @@
 	'pw.option.square' => 'Square',
 
 	/* -------------- Style property labels (rendered by pw-field-row) --------------*/
-	'prw.property.item-style'        => 'Item style',
+	'prw.property.item-style'        => 'Display',
 );
