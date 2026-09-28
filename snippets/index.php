@@ -31,7 +31,9 @@ $items = $block->blocks()->toBlocks();
 if ($items->count() > 0):
 
 	$itemStyle       = $block->itemstyle()->or('default')->value();
-	$itemNumberAlign = $block->itemnumberalign()->or('center')->value();
+	// number alignment per item style, set in the Project Wizard (centered: always centre)
+	$alignKey        = 'item-number-align' . ($itemStyle === 'default' ? '' : '-' . $itemStyle);
+	$itemNumberAlign = $itemStyle === 'centered' ? 'center' : ($config['defaults'][$alignKey] ?? 'center');
 	echo '<div data-block="items"';
 	echo ' data-columns-sm="'.$block->columnssm()->value().'"';
 	echo ' data-columns-md="'.$block->columnsmd()->value().'"';

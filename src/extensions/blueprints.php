@@ -14,25 +14,14 @@ $allItemStyleOptions = [
 	'minimal'   => ['value' => 'minimal',   'text' => ['*' => 'kirbyblock-steplist.item-style.minimal']],
 ];
 
-$allNumberAlignOptions = [
-	'top'    => ['value' => 'top',    'text' => ['*' => 'kirbyblock-steplist.item-number-align.top']],
-	'center' => ['value' => 'center', 'text' => ['*' => 'kirbyblock-steplist.item-number-align.center']],
-];
-
 return [
-	'blocks/pwsteplist' => pwBlueprint::main('pwsteplist', function ($cfg) use ($columnsField, $allItemStyleOptions, $allNumberAlignOptions) {
+	'blocks/pwsteplist' => pwBlueprint::main('pwsteplist', function ($cfg) use ($columnsField, $allItemStyleOptions) {
 		$defaults = $cfg['defaults'];
 		$itemStyleConfig = $cfg['style']['item-style'] ?? [];
 		$itemStyleOptionKeys = $itemStyleConfig['options'] ?? array_keys($allItemStyleOptions);
 		$itemStyleOptions = array_values(array_intersect_key(
 			$allItemStyleOptions,
 			array_flip($itemStyleOptionKeys)
-		));
-		$numberAlignConfig = $cfg['style']['item-number-align'] ?? [];
-		$numberAlignOptionKeys = $numberAlignConfig['options'] ?? array_keys($allNumberAlignOptions);
-		$numberAlignOptions = array_values(array_intersect_key(
-			$allNumberAlignOptions,
-			array_flip($numberAlignOptionKeys)
 		));
 		return [
 			'name' => 'kirbyblock-steplist.name',
@@ -64,16 +53,6 @@ return [
 						'default'  => $defaults['item-style'] ?? 'default',
 						'width'    => '1/1',
 						'options'  => $itemStyleOptions,
-					],
-				'itemNumberAlign' => count($numberAlignOptions) <= 1
-					? ['type' => 'hidden', 'default' => $defaults['item-number-align'] ?? 'center']
-					: [
-						'label'    => ['*' => 'kirbyblock-steplist.item-number-align'],
-						'help'     => ['*' => 'kirbyblock-steplist.item-number-align.help'],
-						'type'     => 'toggles',
-						'default'  => $defaults['item-number-align'] ?? 'center',
-						'width'    => '1/1',
-						'options'  => $numberAlignOptions,
 					],
 			],
 		];

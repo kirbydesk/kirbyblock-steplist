@@ -312,6 +312,30 @@
 					"custom"
 				],
 				"default": "round"
+			},
+			"item-number-align": {
+				"label": "kirbyblock-steplist.item-number-align",
+				"options": [
+					"top",
+					"center"
+				],
+				"default": "center"
+			},
+			"item-number-align-connected": {
+				"label": "kirbyblock-steplist.item-number-align",
+				"options": [
+					"top",
+					"center"
+				],
+				"default": "center"
+			},
+			"item-number-align-minimal": {
+				"label": "kirbyblock-steplist.item-number-align",
+				"options": [
+					"top",
+					"center"
+				],
+				"default": "center"
 			}
 		},
 		"style": {
@@ -334,14 +358,6 @@
 					"minimal"
 				],
 				"default": "default",
-				"required": true
-			},
-			"item-number-align": {
-				"options": [
-					"top",
-					"center"
-				],
-				"default": "center",
 				"required": true
 			}
 		},

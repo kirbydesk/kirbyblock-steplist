@@ -20,10 +20,7 @@
 	'kirbyblock-steplist.item-style.minimal' => 'Minimal',
 
 	/* -------------- Number alignment --------------*/
-	'kirbyblock-steplist.item-number-align' => 'Ausrichtung der Nummer',
-	'kirbyblock-steplist.item-number-align.help' => 'Vertikale Position der Nummer im Verhältnis zum Inhalt des Schritts.',
-	'kirbyblock-steplist.item-number-align.top' => 'Oben',
-	'kirbyblock-steplist.item-number-align.center' => 'Mitte',
+	'kirbyblock-steplist.item-number-align' => 'Ausrichtung',
 
 	/* -------------- Item value labels (rendered by pw-block-values) --------------*/
 	'prw.valuegroup.items' => 'Einträge',
@@ -53,5 +50,4 @@
 
 	/* -------------- Style property labels (rendered by pw-field-row) --------------*/
 	'prw.property.item-style' => 'Darstellung der Schritte',
-	'prw.property.item-number-align' => 'Ausrichtung der Nummer',
 );

@@ -20,10 +20,7 @@
 	'kirbyblock-steplist.item-style.minimal'   => 'Minimal',
 
 	/* -------------- Number alignment --------------*/
-	'kirbyblock-steplist.item-number-align'         => 'Number alignment',
-	'kirbyblock-steplist.item-number-align.help'    => 'Vertical position of the number bubble relative to the step content.',
-	'kirbyblock-steplist.item-number-align.top'     => 'Top',
-	'kirbyblock-steplist.item-number-align.center'  => 'Center',
+	'kirbyblock-steplist.item-number-align'         => 'Alignment',
 
 	/* -------------- Item value labels (rendered by pw-block-values) --------------*/
 	'prw.valuegroup.items'            => 'Items',
@@ -53,5 +50,4 @@
 
 	/* -------------- Style property labels (rendered by pw-field-row) --------------*/
 	'prw.property.item-style'        => 'Item style',
-	'prw.property.item-number-align' => 'Number alignment',
 );
