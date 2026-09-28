@@ -78,6 +78,10 @@ section[data-block="steplist"] {
 		--steplist-number-offset: var(--pwsteplist-item-number-offset-minimal);
 		--steplist-content-gap: var(--pwsteplist-item-content-gap-minimal);
 	}
+	/* number in the centre: no offset (only the top position is corrected) */
+	div[data-block="items"][data-number-align="center"] {
+		--steplist-number-offset: 0rem;
+	}
 
 	/* -------------- Items (base) --------------*/
 	div[data-block="items"] {
