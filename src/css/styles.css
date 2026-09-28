@@ -160,7 +160,7 @@ section[data-block="steplist"] {
 		background: none !important;
 		color: var(--pwsteplist-item-number-background, currentColor) !important;
 		border-radius: 0;
-		font-size: var(--pwsteplist-item-number-size, 2.5rem);
+		font-size: var(--pwsteplist-item-number-size-minimal);
 		line-height: inherit;
 		align-items: baseline;
 	}
