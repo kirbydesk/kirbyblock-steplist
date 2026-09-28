@@ -14,10 +14,10 @@
 	/* -------------- Item style --------------*/
 	'kirbyblock-steplist.item-style'           => 'Item style',
 	'kirbyblock-steplist.item-style.help'      => 'Choose how each step is displayed.',
-	'kirbyblock-steplist.item-style.default'   => 'Default (number left, text right)',
-	'kirbyblock-steplist.item-style.centered'  => 'Centered (number above text)',
-	'kirbyblock-steplist.item-style.connected' => 'Connected (vertical line between steps)',
-	'kirbyblock-steplist.item-style.minimal'   => 'Minimal (number as text prefix)',
+	'kirbyblock-steplist.item-style.default'   => 'Default',
+	'kirbyblock-steplist.item-style.centered'  => 'Centered',
+	'kirbyblock-steplist.item-style.connected' => 'Connected',
+	'kirbyblock-steplist.item-style.minimal'   => 'Minimal',
 
 	/* -------------- Number alignment --------------*/
 	'kirbyblock-steplist.item-number-align'         => 'Number alignment',
