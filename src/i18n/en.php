@@ -39,8 +39,6 @@
 	'prw.prop.item-connector-width'   => 'Connector Width',
 	'prw.prop.item-number-background' => 'Number Background',
 	'prw.prop.item-number-text'       => 'Number Text',
-	'prw.prop.item-heading-text'      => 'Heading Text',
-	'prw.prop.item-editor-text'       => 'Description Text',
 	'prw.prop.item-connector'         => 'Connector Line',
 
 	'kirbyblock-steplist.item-shape' => 'Shape',

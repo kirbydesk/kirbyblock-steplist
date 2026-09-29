@@ -39,8 +39,6 @@
 	'prw.prop.item-connector-width' => 'Breite der Verbindungslinie',
 	'prw.prop.item-number-background' => 'Hintergrund der Nummer',
 	'prw.prop.item-number-text' => 'Farbe der Nummer',
-	'prw.prop.item-heading-text' => 'Überschrift',
-	'prw.prop.item-editor-text' => 'Beschreibung',
 	'prw.prop.item-connector' => 'Verbindungslinie',
 
 	'kirbyblock-steplist.item-shape' => 'Form',
