@@ -56,7 +56,8 @@ if ($items->count() > 0):
 			echo '<div data-field="number">'.$number.'</div>';
 
 			// Content
-			echo '<div data-field="content">'."\n";
+			// Content: title and description in the style of Elements › Items
+			echo '<div data-field="content" data-entry>'."\n";
 
 				// Heading
 				echo '<div data-field="heading">'.$item->heading()->value().'</div>';

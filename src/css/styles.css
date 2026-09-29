@@ -1,20 +1,14 @@
 /* DO NOT MODIFY THIS FILE - Override in site/patches/css/kirbyblock-steplist/_styles.css */
 
-/* Item colors per theme */
+/* Item colors per theme (title and description: Elements › Items) */
 section[data-block="steplist"] [data-block="item"] {
 	[data-field="number"]  { background-color: var(--pwsteplist-item-number-background); color: var(--pwsteplist-item-number-text); }
-	[data-field="heading"] { color: var(--pwsteplist-item-heading-text); }
-	[data-field="text"]    { color: var(--pwsteplist-item-editor-text); }
 }
 section[data-block="steplist"][data-style="variant"] [data-block="item"] {
 	[data-field="number"]  { background-color: var(--pwsteplist-item-number-background-variant); color: var(--pwsteplist-item-number-text-variant); }
-	[data-field="heading"] { color: var(--pwsteplist-item-heading-text-variant); }
-	[data-field="text"]    { color: var(--pwsteplist-item-editor-text-variant); }
 }
 section[data-block="steplist"][data-style="variant2"] [data-block="item"] {
 	[data-field="number"]  { background-color: var(--pwsteplist-item-number-background-variant2); color: var(--pwsteplist-item-number-text-variant2); }
-	[data-field="heading"] { color: var(--pwsteplist-item-heading-text-variant2); }
-	[data-field="text"]    { color: var(--pwsteplist-item-editor-text-variant2); }
 }
 
 section[data-block="steplist"] {
@@ -112,10 +106,8 @@ section[data-block="steplist"] {
 			div[data-field="content"] {
 				flex: 1;
 
-				[data-field="heading"] + [data-field="text"]{
-					margin-top: 0.2rem;
-				}
-
+				/* title and description: Project Wizard → Elements › Items (the
+				   block's own values when switched on, see pagewizard) */
 				div[data-field="text"]{
 					ul {
 						margin: .5rem 0 0;
@@ -256,8 +248,6 @@ section[data-block="steplist"] {
 /* -------------- Variant 3 (mirror of variant2) --------------*/
 section[data-block="steplist"][data-style="variant3"] [data-block="item"] {
 	[data-field="number"]  { background-color: var(--pwsteplist-item-number-background-variant3); color: var(--pwsteplist-item-number-text-variant3); }
-	[data-field="heading"] { color: var(--pwsteplist-item-heading-text-variant3); }
-	[data-field="text"]    { color: var(--pwsteplist-item-editor-text-variant3); }
 }
 section[data-block="steplist"][data-style="variant3"] [data-item-style="connected"] [data-block="item"]::after {
 	background: var(--pwsteplist-item-connector-variant3, currentColor);
