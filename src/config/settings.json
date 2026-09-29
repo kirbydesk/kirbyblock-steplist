@@ -145,6 +145,13 @@
 					"min": 0,
 					"max": 6
 				},
+				"list-spacing": {
+					"value": "1em",
+					"unit": "em",
+					"step": 0.1,
+					"min": 0,
+					"max": 6
+				},
 				"item-title-font-size": {
 					"default": "1.25rem",
 					"lg": "1.25rem",
