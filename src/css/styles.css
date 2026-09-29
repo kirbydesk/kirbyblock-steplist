@@ -12,16 +12,18 @@ section[data-block="steplist"][data-style="variant2"] [data-block="item"] {
 }
 
 section[data-block="steplist"] {
+	/* the gap between the intro (tagline, heading, text) and the steps
+	   (Project Wizard → Design › Spacing) */
 	/* -------------- Tagline Margins--------------*/
 	[data-field="tagline"] {
 		+ [data-block="items"] {
-			margin-top: 1rem;
+			margin-top: var(--pwsteplist-item-text-gap);
 		}
 	}
 	/* -------------- Heading Margins--------------*/
 	[data-field="heading"] {
 		+ [data-block="items"] {
-			margin-top: 1.2rem;
+			margin-top: var(--pwsteplist-item-text-gap);
 		}
 	}
 	/* -------------- Texts Margins--------------*/
@@ -29,7 +31,7 @@ section[data-block="steplist"] {
 	[data-field="writer"],
 	[data-field="markdown"] {
 		+ [data-block="items"] {
-			margin-top: 2rem;
+			margin-top: var(--pwsteplist-item-text-gap);
 		}
 	}
 

@@ -43,6 +43,14 @@
 					"min": 0,
 					"max": 6
 				},
+				"item-text-gap": {
+					"label": "kirbyblock-steplist.item-text-gap",
+					"value": "2rem",
+					"unit": "rem",
+					"step": 0.1,
+					"min": 0,
+					"max": 8
+				},
 				"item-number-offset": {
 					"value": "0rem",
 					"unit": "rem",
