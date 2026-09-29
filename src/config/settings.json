@@ -265,7 +265,9 @@
 					"default": "normal"
 				}
 			},
-			"blocks": {}
+			"blocks": {
+				"locked": true
+			}
 		},
 		"layout": {
 			"padding": "enabled",
