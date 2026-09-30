@@ -36,14 +36,8 @@ return [
 				]
 			),
 			'layoutExtras' => [
-				'headlineColumns' => ['extends' => 'pagewizard/headlines/columns'],
-				// the connected style: always one column (the fields below no effect)
-				'columnsConnectedInfo' => [
-					'type'  => 'info',
-					'theme' => 'notice',
-					'text'  => 'kirbyblock-steplist.columns.connected',
-					'when'  => ['itemstyle' => 'connected'],
-				],
+				// the connected style: always one column (the columns gone)
+				'headlineColumns' => ['extends' => 'pagewizard/headlines/columns', 'unless' => ['itemstyle' => 'connected']],
 				'columnsSm'       => $columnsField('sm', $defaults['columns-sm']),
 				'columnsMd'       => $columnsField('md', $defaults['columns-md']),
 				'columnsLg'       => $columnsField('lg', $defaults['columns-lg']),
