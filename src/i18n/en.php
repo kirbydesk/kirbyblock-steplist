@@ -1,6 +1,7 @@
 <?php return array(
 
 	'kirbyblock-steplist.name' => 'Step List',
+	'kirbyblock-steplist.columns.connected' => 'With the connected style the steps always stand one below the other, the columns have no effect.',
 	'kirbyblock-steplist.ai' => 'A numbered sequence of steps. Use it whenever the content describes a process or procedure in a fixed order.',
 	'kirbyblock-steplist.item' => 'Step',
 	'kirbyblock-steplist.item.heading' => 'Step title',

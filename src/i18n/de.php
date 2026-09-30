@@ -1,6 +1,7 @@
 <?php return array(
 
 	'kirbyblock-steplist.name' => 'Schritt-Liste',
+	'kirbyblock-steplist.columns.connected' => 'Beim Stil „Verbunden“ stehen die Schritte immer untereinander, die Spalten wirken nicht.',
 	'kirbyblock-steplist.ai' => 'Eine nummerierte Abfolge von Schritten. Immer verwenden, wenn der Inhalt einen Ablauf oder ein Vorgehen in fester Reihenfolge beschreibt.',
 	'kirbyblock-steplist.item' => 'Schritt',
 	'kirbyblock-steplist.item.heading' => 'Titel des Schritts',
