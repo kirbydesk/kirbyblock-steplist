@@ -6,6 +6,7 @@
 
 		<pwBlockinfo
 			:value="$t('kirbyblock-steplist.name')"
+			:design="'pwsteplist'"
 			icon="steplist"
 		/>
 
