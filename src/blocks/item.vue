@@ -22,7 +22,9 @@ div.item {
   flex-wrap: nowrap;
 	font-size: var(--text-sm);
 
+  /* (a step larger than the text: stands out from bold in it) */
   div.pwHeading {
+    font-size: var(--text-md);
     font-weight: var(--font-bold);
     padding: var(--spacing-1) 0;
   }
