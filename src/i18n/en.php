@@ -50,5 +50,5 @@
 	'prw.property.item-style'        => 'Display',
 
 	/* -------------- Entries (Elements › Items, own values) --------------*/
-	'kirbyblock-steplist.item-text-gap' => 'Enlarge the gap to the intro',
+	'kirbyblock-steplist.item-text-gap' => 'Gap to the intro',
 );
