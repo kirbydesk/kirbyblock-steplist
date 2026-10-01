@@ -50,5 +50,5 @@
 	'prw.property.item-style' => 'Darstellung',
 
 	/* -------------- Entries (Elements › Items, own values) --------------*/
-	'kirbyblock-steplist.item-text-gap' => 'Abstand zur Einleitung',
+	'kirbyblock-steplist.item-text-gap' => 'Abstand zur Einleitung vergrößern',
 );

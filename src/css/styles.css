@@ -17,13 +17,13 @@ section[data-block="steplist"] {
 	/* -------------- Tagline Margins--------------*/
 	[data-field="tagline"] {
 		+ [data-block="items"] {
-			margin-top: var(--pwsteplist-item-text-gap);
+			padding-top: var(--pwsteplist-item-text-gap);
 		}
 	}
 	/* -------------- Heading Margins--------------*/
 	[data-field="heading"] {
 		+ [data-block="items"] {
-			margin-top: var(--pwsteplist-item-text-gap);
+			padding-top: var(--pwsteplist-item-text-gap);
 		}
 	}
 	/* -------------- Texts Margins--------------*/
@@ -31,7 +31,7 @@ section[data-block="steplist"] {
 	[data-field="writer"],
 	[data-field="markdown"] {
 		+ [data-block="items"] {
-			margin-top: var(--pwsteplist-item-text-gap);
+			padding-top: var(--pwsteplist-item-text-gap);
 		}
 	}
 
@@ -253,9 +253,3 @@ section[data-block="steplist"][data-style="variant3"] [data-item-style="connecte
 	background: var(--pwsteplist-item-connector-variant3, currentColor);
 }
 
-/* the intro's last element: no space below of its own before the steps –
-   there only the gap to the intro applies (Project Wizard → Design ›
-   Spacing); the elements' space below applies within the intro */
-section[data-block="steplist"][data-block] :is([data-field="tagline"], [data-field="heading"], [data-field="textarea"], [data-field="writer"], [data-field="markdown"]):has(+ [data-block="items"]):not([data-block="item"] *) {
-	margin-bottom: 0;
-}
