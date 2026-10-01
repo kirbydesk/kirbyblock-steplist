@@ -50,9 +50,5 @@
 	'prw.property.item-style'        => 'Display',
 
 	/* -------------- Entries (Elements › Items, own values) --------------*/
-	'prw.prop.item-title-font-size' => 'Title Size',
-	'prw.prop.item-title-line-height' => 'Title Line Height',
-	'prw.prop.item-text-font-size' => 'Description Size',
-	'prw.prop.item-title-spacing' => 'Gap to the description',
 	'kirbyblock-steplist.item-text-gap' => 'Space to the intro',
 );
